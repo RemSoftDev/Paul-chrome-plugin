@@ -1,0 +1,17 @@
+{
+  "app_name": {
+    "message": "1"
+  },
+  "app_description": {
+    "message": "1"
+  },
+  "browser_action": {
+    "message": "1"
+  },
+  "mode_enable": {
+    "message": "1"
+  },
+  "mode_disable": {
+    "message": "1"
+  }
+}

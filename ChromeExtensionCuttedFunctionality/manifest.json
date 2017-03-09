@@ -1,0 +1,56 @@
+{
+  // default for the latest version of Chrome extensions
+  "manifest_version": 2,
+
+  // extension related general info
+  "name": "FB Interest Search Tool",
+  "short_name": "FB Interest Search Tool",
+  "description": "FB Interest Search Tool",
+  "version": "1.0.0",
+
+  "default_locale": "en",
+
+  // sets path to popup files
+  "browser_action": {
+    "default_icon": "img/128.png",
+    "default_popup": "popups/popup.html",
+    "default_title": "FB Interest Search Tool"
+  },
+
+  // sets path to content scripts and when they are injected onto the page
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "css": [ "styles/styles.css" ],
+      "js": [
+        "bower_components/jquery.min.js",
+        "bower_components/jquery.cookie.js"
+      ]
+    }
+  ],
+
+  // sets path to background scripts
+  "background": {
+    "scripts": [
+      "bower_components/jquery.min.js",
+      "bower_components/jquery.cookie.js",
+      "bg/background.js",
+      "content-scripts/rewriteStorage.js"
+    ]
+  },
+
+  "permissions": [
+    "activeTab",
+    "http://*/",
+    "https://*/",
+    "file:///*/*",
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "storage",
+    "cookies"
+  ],
+
+  "web_accessible_resources": [ "styles/commentblocker_on.css" ]
+}

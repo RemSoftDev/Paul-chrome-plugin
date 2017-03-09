@@ -1,0 +1,50 @@
+{
+  // default for the latest version of Chrome extensions
+  "manifest_version": 2,
+
+  // extension related general info
+  "name": "Search Engine",
+  "short_name": "Search Engine",
+  "description": "Search Engine",
+  "version": "1.0.0",
+
+  "default_locale": "en",
+
+  // sets path to popup files
+  "browser_action": {
+    "default_icon": "content/Crazy-50.png",
+    "default_popup": "popups/popup.html",
+    "default_title": "Search Engine"
+  },
+
+  // sets path to content scripts and when they are injected onto the page
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*" ],     
+      // "js": [ "js/jquery-3.1.1.min.js","popups/tabs.js" ]
+        "js": ["js/jquery-3.1.1.min.js"]
+    }
+  ],
+
+  // sets path to background scripts
+  "background": {
+    "scripts": [
+      "background/background.js"
+             
+    ]
+  },
+"content_security_policy":"script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+
+  "permissions": [
+    "activeTab",
+    "http://*/",
+    "https://*/",
+    "file:///*/*",
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "storage",
+    "cookies"
+  ] 
+}

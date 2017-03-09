@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="/bower_components/jquery.min.js"></script>
+    <script type="text/javascript" src="/bg/background.js"></script>
+</head>
+<body>
+    <style>
+        .buttonsStyle{
+            width: 110px;
+            text-align: center;
+            margin: 5px 45px;
+            
+        }
+        #buttons{
+            width: 200px;
+			background-image: url("back.png");
+        }
+    </style>
+    
+    <div id="buttons">
+
+        <div>
+            <button type="button" class="buttonsStyle" id="golikes">Go to likes</button>
+        </div>
+
+        <div>
+            <button type="button" class="buttonsStyle" id="do-count">Get Likes</button>
+        </div>
+
+        <div>
+            <button type="button" class="buttonsStyle" id="activation-button">Activation</button>
+        </div>
+		
+		
+
+        <div id="text-form">
+            <input type="password" placeholder="Your License Key" id="code-box" style="width: 190px; text-align: center; margin: 5px 5px"/>
+        </div>
+		
+		<div style="margin: auto; width: 55%; color: green; font-weight: bold; font-size: 12pt">
+		<span id="status" style="display: none">
+		Key accepted
+		</span>
+		
+		</div>
+		
+    </div>
+</body>
+</html>
